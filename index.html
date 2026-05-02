@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Todo App</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="todo-panel" aria-labelledby="app-title">
+        <div class="title-row">
+          <div>
+            <p class="eyebrow">Day 1 beginner project</p>
+            <h1 id="app-title">Todo List</h1>
+          </div>
+          <span class="counter" id="todo-count">0 left</span>
+        </div>
+
+        <form class="todo-form" id="todo-form">
+          <label class="sr-only" for="todo-input">New todo</label>
+          <input id="todo-input" type="text" placeholder="Add a task..." autocomplete="off" />
+          <button type="submit">Add</button>
+        </form>
+
+        <div class="filters" aria-label="Todo filters">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="active">Active</button>
+          <button class="filter-button" type="button" data-filter="completed">Done</button>
+        </div>
+
+        <ul class="todo-list" id="todo-list" aria-live="polite"></ul>
+
+        <p class="empty-state" id="empty-state">No tasks yet. Add one small thing to start.</p>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
